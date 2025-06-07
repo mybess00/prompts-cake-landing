@@ -1,4 +1,6 @@
 ---
+import "@splidejs/splide/css"
+import { Splide, SplideSlide } from 'astro-splide';
 import TestimonialCard from "./card/TestimonialCard.astro"
 
 const testimonials = [
@@ -57,31 +59,56 @@ const testimonials = [
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {testimonials.map(testimonial => (
-        <TestimonialCard
-          name={testimonial.name}
-          role={testimonial.role}
-          avatar={testimonial.avatar}
-          rating={testimonial.rating}
-          text={testimonial.text}
-        />
-      ))}
+    <div class="">
+      <Splide
+        options={ {
+          type: 'loop',
+          interval: 3000,
+          autoplay: true,
+          pauseOnHover: false,
+          perPage: 3,
+          perMove: 1,
+          gap: "1rem",
+          arrows: false,
+          pagination: false,
+          breakpoints: {
+            640: {
+              perPage: 1,
+              perMove: 1
+            },
+            850: {
+              perPage: 2
+            }
+          }
+        }}
+      >
+        {testimonials.map(testimonial => (
+          <SplideSlide>
+            <TestimonialCard
+              name={testimonial.name}
+              role={testimonial.role}
+              avatar={testimonial.avatar}
+              rating={testimonial.rating}
+              text={testimonial.text}
+            />
+          </SplideSlide>
+        ))}
+      </Splide>
     </div>
 
     <div class="text-center mt-12">
-      <div class="inline-flex flex-col sm:flex-row items-center gap-8 px-8 py-4 bg-[#2f2546]/30 backdrop-blur-sm rounded-2xl border border-[#7d64c7]/20">
+      <div class="grid grid-cols-3 sm:inline-flex justify-items-center gap-8 px-8 py-4 bg-[#2f2546]/30 backdrop-blur-sm rounded-2xl border border-[#7d64c7]/20">
         <div class="text-center">
           <div class="text-2xl font-bold text-white">4.9/5</div>
           <div class="text-sm text-[#7d64c7]">Rating promedio</div>
         </div>
-        <div class="h-px w-full sm:w-px sm:h-12 bg-[#7d64c7]/20" />
+        <div class="w-px h-12 bg-[#7d64c7]/20" />
         <div class="text-center">
           <div class="text-2xl font-bold text-white">10K+</div>
           <div class="text-sm text-[#7d64c7]">Usuarios activos</div>
         </div>
-        <div class="h-px w-full sm:w-px sm:h-12 bg-[#7d64c7]/20" />
-        <div class="text-center">
+        <div class="h-px w-full sm:w-px sm:h-12 bg-[#7d64c7]/20 col-span-3" />
+        <div class="text-center col-span-3">
           <div class="text-2xl font-bold text-white">500+</div>
           <div class="text-sm text-[#7d64c7]">Reseñas 5★</div>
         </div>
