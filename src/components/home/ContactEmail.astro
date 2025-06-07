@@ -1,0 +1,64 @@
+---
+import Button from "../ui/Button.astro"
+import Input from "../ui/Input.astro"
+---
+
+<section class="py-20 px-4">
+  <div class="container mx-auto max-w-4xl">
+    <div class="glass-card p-12 text-center">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <h2 class="text-4xl lg:text-5xl font-bold gradient-text">
+            Mantente Conectado
+          </h2>
+          <p class="text-xl text-white-text">
+            Recibe tips, nuevos templates y actualizaciones de Prompts Cake
+          </p>
+        </div>
+
+        <form class="max-w-md mx-auto">
+          <div class="flex gap-3">
+            <Input
+              type="email"
+              placeholder="tu@email.com"
+              required
+              className="bg-card border-ui-accent/30 text-white-text placeholder:text-foreground focus:border-primary"
+            />
+            <Button 
+              type="submit"
+              class="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6"
+            >
+              Suscribirse
+            </Button>
+          </div>
+        </form>
+
+        {/* Benefits */}
+        <div class="grid md:grid-cols-3 gap-6 pt-8 border-t border-ui-accent/20">
+          <div class="space-y-2">
+            <div class="text-2xl">📧</div>
+            <h4 class="text-white-text font-semibold">Updates Semanales</h4>
+            <p class="text-foreground text-sm">Novedades y mejoras cada semana</p>
+          </div>
+          
+          <div class="space-y-2">
+            <div class="text-2xl">🎁</div>
+            <h4 class="text-white-text font-semibold">Prompts Exclusivos</h4>
+            <p class="text-foreground text-sm">Templates premium solo para suscriptores</p>
+          </div>
+          
+          <div class="space-y-2">
+            <div class="text-2xl">💡</div>
+            <h4 class="text-white-text font-semibold">Tips & Tricks</h4>
+            <p class="text-foreground text-sm">Consejos de expertos en IA</p>
+          </div>
+        </div>
+
+        {/* Privacy note */}
+        <p class="text-sm text-ui-accent">
+          🔒 Respetamos tu privacidad. Sin spam, fácil de cancelar en cualquier momento.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

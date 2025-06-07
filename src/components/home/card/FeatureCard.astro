@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const {
+  title,
+  description,
+} = Astro.props
+---
+
+<div
+  class="rounded-lg border text-card-foreground shadow-sm bg-[#2f2546]/30 backdrop-blur-sm border-[#7d64c7]/20 p-8 hover:bg-[#2f2546]/50 transition-all duration-300 group"
+>
+  <div class="mb-6">
+    <div class="w-14 h-14 rounded-2xl bg-[#b69df1]/10 flex items-center justify-center group-hover:bg-[#b69df1]/20 transition-colors">
+      <slot />
+      <!-- <feature.icon class="w-7 h-7 text-[#b69df1]" /> -->
+    </div>
+  </div>
+
+  <h3 class="text-xl font-semibold text-white mb-4">{title}</h3>
+
+  <p class="text-[#a495c6] leading-relaxed">{description}</p>
+</div>

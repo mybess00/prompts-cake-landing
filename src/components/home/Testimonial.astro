@@ -1,0 +1,91 @@
+---
+import TestimonialCard from "./card/TestimonialCard.astro"
+
+const testimonials = [
+  {
+    name: "María González",
+    role: "Content Creator",
+    avatar: "/placeholder.svg?height=48&width=48",
+    rating: 5,
+    text: "Prompts Cake ha revolucionado mi flujo de trabajo. Antes perdía tiempo buscando prompts en mis notas, ahora todo está organizado y accesible con un clic.",
+  },
+  {
+    name: "Carlos Ruiz",
+    role: "Desarrollador Full Stack",
+    avatar: "/placeholder.svg?height=48&width=48",
+    rating: 5,
+    text: "Como programador, uso diferentes prompts para code review, documentación y debugging. Esta extensión me ahorra horas cada semana.",
+  },
+  {
+    name: "Ana Martín",
+    role: "Marketing Manager",
+    avatar: "/placeholder.svg?height=48&width=48",
+    rating: 5,
+    text: "La función de templates es increíble. Puedo crear prompts personalizables para diferentes campañas y reutilizarlos fácilmente.",
+  },
+  {
+    name: "David López",
+    role: "Consultor de Negocios",
+    avatar: "/placeholder.svg?height=48&width=48",
+    rating: 5,
+    text: "La sincronización entre dispositivos es perfecta. Creo prompts en mi laptop y los uso en mi tablet sin problemas.",
+  },
+  {
+    name: "Laura Fernández",
+    role: "Escritora Freelance",
+    avatar: "/placeholder.svg?height=48&width=48",
+    rating: 5,
+    text: "El sistema de etiquetas y carpetas me permite encontrar exactamente el prompt que necesito en segundos. ¡Imprescindible!",
+  },
+]
+---
+
+<section class="py-24 px-4">
+  <div class="container mx-auto max-w-7xl">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2f2546]/50 backdrop-blur-sm border border-[#7d64c7]/20 mb-6">
+        <span class="text-sm text-[#7d64c7]">#Testimonials</span>
+      </div>
+
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+        Lo que dicen nuestros
+        <span class="text-[#b69df1]"> usuarios</span>
+      </h2>
+
+      <p class="text-xl text-[#a495c6] max-w-3xl mx-auto">
+        Miles de profesionales ya están optimizando su trabajo con IA usando Prompts Cake.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map(testimonial => (
+        <TestimonialCard
+          name={testimonial.name}
+          role={testimonial.role}
+          avatar={testimonial.avatar}
+          rating={testimonial.rating}
+          text={testimonial.text}
+        />
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <div class="inline-flex flex-col sm:flex-row items-center gap-8 px-8 py-4 bg-[#2f2546]/30 backdrop-blur-sm rounded-2xl border border-[#7d64c7]/20">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-white">4.9/5</div>
+          <div class="text-sm text-[#7d64c7]">Rating promedio</div>
+        </div>
+        <div class="h-px w-full sm:w-px sm:h-12 bg-[#7d64c7]/20" />
+        <div class="text-center">
+          <div class="text-2xl font-bold text-white">10K+</div>
+          <div class="text-sm text-[#7d64c7]">Usuarios activos</div>
+        </div>
+        <div class="h-px w-full sm:w-px sm:h-12 bg-[#7d64c7]/20" />
+        <div class="text-center">
+          <div class="text-2xl font-bold text-white">500+</div>
+          <div class="text-sm text-[#7d64c7]">Reseñas 5★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

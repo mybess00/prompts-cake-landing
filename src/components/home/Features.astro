@@ -1,0 +1,72 @@
+---
+import Save from "../icon/Save.astro"
+import Repeat from "../icon/Repeat.astro"
+import Zap from "../icon/Zap.astro"
+import Layers from "../icon/Layers.astro"
+import Search from "../icon/Search.astro"
+import Share2 from "../icon/Share2.astro"
+import FeatureCard from "./card/FeatureCard.astro"
+
+const features = [
+    {
+      icon: Save,
+      title: "Guarda tus Prompts",
+      description:
+        "Almacena y organiza todos tus prompts favoritos en un solo lugar, accesible desde cualquier plataforma de IA.",
+    },
+    {
+      icon: Repeat,
+      title: "Reutilización Inteligente",
+      description: "Usa tus prompts guardados con un solo clic en ChatGPT, Gemini, Groq, DeepSeek y más plataformas.",
+    },
+    {
+      icon: Zap,
+      title: "Acceso Rápido",
+      description:
+        "Botón flotante integrado directamente en las interfaces de IA para acceso instantáneo a tus prompts.",
+    },
+    {
+      icon: Layers,
+      title: "Templates Dinámicos",
+      description: "Crea plantillas de prompts con variables personalizables para diferentes casos de uso.",
+    },
+    {
+      icon: Search,
+      title: "Búsqueda Avanzada",
+      description: "Encuentra rápidamente el prompt perfecto con nuestro sistema de búsqueda y etiquetado inteligente.",
+    },
+    {
+      icon: Share2,
+      title: "Sincronización Cloud",
+      description: "Tus prompts se sincronizan automáticamente entre todos tus dispositivos y navegadores.",
+    },
+]
+---
+
+<section class="py-24 px-4">
+  <div class="container mx-auto max-w-7xl">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2f2546]/50 backdrop-blur-sm border border-[#7d64c7]/20 mb-6">
+        <span class="text-sm text-[#7d64c7]">#Features</span>
+      </div>
+
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+        Todo lo que necesitas para
+        <span class="text-[#b69df1]"> dominar la IA</span>
+      </h2>
+
+      <p class="text-xl text-[#a495c6] max-w-3xl mx-auto">
+        Prompts Cake transforma tu experiencia con modelos de IA, haciendo que el trabajo con prompts sea más
+        eficiente y organizado.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map(feature => (
+        <FeatureCard title={feature.title} description={feature.description}>
+          <feature.icon class="w-7 h-7 text-[#b69df1]" />
+        </FeatureCard>
+      ))}
+    </div>
+  </div>
+</section>

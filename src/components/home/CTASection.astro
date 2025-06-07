@@ -1,0 +1,71 @@
+---
+import Button from "../ui/Button.astro"
+---
+
+<section class="py-20 px-4">
+  <div class="container mx-auto max-w-4xl relative">
+    {/* Background gradient */}
+    <div class="absolute inset-0 bg-gradient-to-r from-[#b69df1]/10 via-[#2f2546]/20 to-[#b69df1]/10 rounded-3xl" />
+    <div class="absolute inset-0 bg-[#2f2546]/30 backdrop-blur-sm rounded-3xl border border-[#7d64c7]/20" />
+    
+    <div class="text-center p-12 z-10 relative">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <h2 class="text-4xl lg:text-6xl font-bold gradient-text">
+            ¿Listo para optimizar tu IA?
+          </h2>
+          <p class="text-xl text-white-text">
+            Únete a miles de profesionales que ya están trabajando más eficientemente
+          </p>
+          <p class="text-lg text-foreground max-w-2xl mx-auto">
+            Instala Prompts Cake ahora y transforma tu experiencia con modelos de IA. 
+            Es gratis, fácil de usar y te ahorrará horas cada semana.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button 
+            size="lg" 
+            class="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-12 py-6 text-xl glow animate-pulse-glow"
+          >
+            🍰 Instalar Ahora - Gratis
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg"
+            class="border-ui-accent text-white-text hover:bg-ui-accent/10 px-8 py-6 text-lg"
+          >
+            📺 Ver Video Demo
+          </Button>
+        </div>
+
+        {/* Features highlight */}
+        <div class="flex flex-wrap justify-center gap-6 pt-8 border-t border-ui-accent/20">
+          <div class="flex items-center gap-2">
+            <span class="text-green-400">✓</span>
+            <span class="text-foreground">Instalación en 30 segundos</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-green-400">✓</span>
+            <span class="text-foreground">Completamente gratis</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-green-400">✓</span>
+            <span class="text-foreground">Compatible con todas las plataformas</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-green-400">✓</span>
+            <span class="text-foreground">Sin registro requerido</span>
+          </div>
+        </div>
+
+        {/* Urgency */}
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-4">
+          <p class="text-primary font-semibold">
+            🎉 Lanzamiento especial: Acceso premium gratuito por tiempo limitado
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

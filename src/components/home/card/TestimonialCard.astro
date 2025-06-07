@@ -1,0 +1,51 @@
+---
+import Star from '../../icon/Star.astro';
+import Quote from '../../icon/Quote.astro';
+
+interface Props {
+  name: string;
+  role: string;
+  avatar: string;
+  rating: number;
+  text: string;
+}
+
+const {
+  name,
+  role,
+  avatar,
+  rating,
+  text
+} = Astro.props
+---
+<div
+  class="rounded-lg border text-card-foreground shadow-sm bg-[#2f2546]/30 backdrop-blur-sm border-[#7d64c7]/20 p-8 hover:bg-[#2f2546]/50 transition-all duration-300 relative"
+>
+  <Quote class="absolute top-6 right-6 w-8 h-8 text-[#7d64c7]/20" />
+
+  <div class="mb-6">
+    <div class="flex gap-1 mb-4">
+      {[...Array(rating)].map((_, i) => (
+        <Star class="w-5 h-5 text-[#b69df1] fill-current" />
+      ))}
+    </div>
+
+    <p class="text-[#a495c6] leading-relaxed mb-6">"{text}"</p>
+  </div>
+
+  <div class="flex items-center gap-4">
+    <div class="w-12 h-12 rounded-full bg-[#b69df1]/20 flex items-center justify-center">
+      <span class="text-[#b69df1] font-semibold text-lg">
+        {name
+          .split(" ")
+          .map((n) => n[0])
+          .join("")}
+      </span>
+    </div>
+
+    <div>
+      <div class="text-white font-semibold">{name}</div>
+      <div class="text-[#7d64c7] text-sm">{role}</div>
+    </div>
+  </div>
+</div>

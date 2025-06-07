@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+} 
+
+/* Agregado */
+
+/* Custom color palette for Prompts Cake */
+
+@layer base {
+  :root {
+    /* Main background */
+    --background: #161221;
+    --foreground: #a495c6;
+
+    /* Cards and secondary backgrounds */
+    --card: #2f2546;
+    --card-foreground: #a495c6;
+
+    /* Primary purple for buttons and highlights */
+    --primary: #b69df1;
+    --primary-foreground: #161221;
+
+    /* Secondary colors */
+    --secondary: #2f2546;
+    --secondary-foreground: #a495c6;
+
+    /* Muted text */
+    --muted: #2f2546;
+    --muted-foreground: #7d64c7;
+
+    /* Accent colors */
+    --accent: #2f2546;
+    --accent-foreground: #b69df1;
+
+    /* High contrast white text */
+    --white-text: #FFFFFF;
+
+    /* UI accent purple */
+    --ui-accent: #7d64c7;
+
+    --border: #2f2546;
+    --input: #2f2546;
+    --ring: #b69df1;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-color: #161221;
+    color: #a495c6;
+  }
+}
+
+/* Custom glassmorphism utilities */
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-md bg-opacity-10 border border-opacity-20;
+    background: rgba(47, 37, 70, 0.3);
+    border-color: rgba(180, 157, 241, 0.2);
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl p-6;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #b69df1 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow {
+    box-shadow: 0 0 20px rgba(180, 157, 241, 0.3);
+  }
+
+  .hero-gradient {
+    background: radial-gradient(ellipse at center, rgba(180, 157, 241, 0.1) 0%, transparent 70%);
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(180, 157, 241, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(180, 157, 241, 0.5); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}

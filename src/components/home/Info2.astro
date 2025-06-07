@@ -1,0 +1,137 @@
+---
+import Zap from "../icon/Zap.astro"
+import RectangleEllipsis from "../icon/RectangleEllipsis.astro"
+import MousePointerClick from "../icon/MousePointerClick.astro"
+---
+<section class="py-20 px-4">
+  <div class="container mx-auto max-w-6xl">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Left Content - Visual */}
+      <div class="relative order-2 lg:order-1">
+        <div class="glass-card p-6">
+          <div class="bg-gradient-to-br from-card to-accent rounded-xl p-6">
+            {/* Browser mockup */}
+            <div class="bg-background rounded-lg p-4 mb-4">
+              <div class="flex items-center gap-2 mb-4">
+                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                <span class="text-sm text-foreground ml-4">chat.openai.com</span>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="bg-card rounded-lg p-3">
+                  <p class="text-sm text-foreground">¿Cómo puedo mejorar mi productividad?</p>
+                </div>
+                
+                {/* The Prompts Cake floating button */}
+                <div class="relative bg-card rounded-lg p-3 border-2 border-primary/50">
+                  <div class="absolute -right-2 -top-2 bg-primary rounded-full p-2 glow animate-pulse-glow">
+                    <span class="text-sm">🍰</span>
+                  </div>
+                  <p class="text-sm text-white-text font-medium">Prompts Cake detectado!</p>
+                  <p class="text-xs text-foreground">Click para acceder a tu biblioteca</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Usage flow */}
+            <div class="bg-[#161221]/30 rounded-xl p-4 space-y-3">
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-[#b69df1]/20 flex items-center justify-center text-xs text-[#b69df1] font-bold">
+                  1
+                </div>
+                <span class="text-white text-sm">Haz clic en el botón flotante</span>
+                <MousePointerClick class="w-4 h-4 text-[#b69df1]" />
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-[#b69df1]/20 flex items-center justify-center text-xs text-[#b69df1] font-bold">
+                  2
+                </div>
+                <span class="text-white text-sm">Selecciona tu prompt favorito</span>
+                <RectangleEllipsis class="w-4 h-4 text-[#b69df1]" />
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-[#b69df1]/20 flex items-center justify-center text-xs text-[#b69df1] font-bold">
+                  3
+                </div>
+                <span class="text-white text-sm">¡Listo! Se inserta automáticamente</span>
+                <Zap class="w-4 h-4 text-[#b69df1]" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Supported platforms */}
+        <div class="absolute -bottom-6 -left-6 glass rounded-xl p-4 animate-float" style={{animationDelay: '1s'}}>
+          <div class="flex gap-2">
+            <span class="text-lg">🤖</span>
+            <span class="text-lg">💎</span>
+            <span class="text-lg">⚡</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Content */}
+      <div class="space-y-8 order-1 lg:order-2">
+        <div class="space-y-4">
+          <h2 class="text-4xl lg:text-5xl font-bold gradient-text">
+            Integración Perfecta
+          </h2>
+          <p class="text-xl text-white-text">
+            Un botón inteligente que se adapta a cada plataforma
+          </p>
+          <p class="text-lg text-foreground leading-relaxed">
+            Prompts Cake detecta automáticamente cuando estás en una plataforma de IA 
+            compatible y muestra discretamente nuestro botón de acceso rápido. 
+            Un click y tienes toda tu biblioteca a tu disposición.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="glass rounded-xl p-4">
+            <h4 class="text-lg font-semibold text-white-text mb-3">Plataformas Compatibles</h4>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center gap-2">
+                <span class="text-lg">🤖</span>
+                <span class="text-foreground">ChatGPT</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-lg">💎</span>
+                <span class="text-foreground">Gemini</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-lg">⚡</span>
+                <span class="text-foreground">Groq</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-lg">🧠</span>
+                <span class="text-foreground">DeepSeek</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-lg">🎭</span>
+                <span class="text-foreground">Claude</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-lg">➕</span>
+                <span class="text-foreground">Y más...</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-primary rounded-lg p-2 mt-1">
+              <span class="text-lg">🎯</span>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-white-text mb-2">Detección Inteligente</h4>
+              <p class="text-foreground">Se activa solo cuando estás en una plataforma compatible</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
