@@ -1,0 +1,31 @@
+---
+import HeroMockup from "../home/HeroMockup.astro"
+import Form from "./Form.astro"
+---
+
+<section class="relative min-h-screen flex items-center justify-center px-4 py-20">
+  <div class="hero-gradient absolute inset-0"></div>
+  <div class="container mx-auto max-w-6xl relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left Content -->
+      <div class="space-y-8">
+        <div class="px-2 py-4">
+          <HeroMockup/>
+        </div>
+        <div class="space-y-4">
+          <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+            <span class="text-white">Prompts</span> <span class="text-[#b69df1]">Cake</span>
+          </h1>
+
+          <p class="text-xl lg:text-2xl text-[#a495c6] leading-relaxed max-w-2xl">
+            Crea, guarda y reutiliza prompts para{" "}
+            <span class="text-white font-semibold">ChatGPT, Gemini, Grok, DeepSeek</span> y más.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Content - Mockup -->
+      <Form/>
+    </div>
+  </div>
+</section>

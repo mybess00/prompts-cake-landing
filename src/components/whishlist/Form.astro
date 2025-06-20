@@ -1,0 +1,57 @@
+---
+import Input from "../ui/Input.astro"
+import Button from "../ui/Button.astro"
+import Mail from "../icon/Mail.astro"
+import User from "../icon/User.astro"
+---
+<div>
+  <div class="container mx-auto max-w-2xl">
+    <div class="bg-[#2f2546]/30 backdrop-blur-sm border-[#7d64c7]/20 p-8">
+      <form class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label for="name" class="text-white font-medium text-sm">
+              Nombre *
+            </label>
+            <div class="relative">
+              <User class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#7d64c7]" />
+              <Input
+                type="text"
+                required
+                className="pl-12 bg-[#161221]/50 border-[#7d64c7]/20 text-white placeholder:text-[#7d64c7] focus:border-[#b69df1] h-12 rounded-xl"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label for="email" class="text-white font-medium text-sm">
+              Email *
+            </label>
+            <div class="relative">
+              <Mail class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#7d64c7]" />
+              <Input
+                type="email"
+                placeholder="tu@email.com"
+                required
+                className="pl-12 bg-[#161221]/50 border-[#7d64c7]/20 text-white placeholder:text-[#7d64c7] focus:border-[#b69df1] h-12 rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+
+        <Button
+          type="submit"
+          class="w-full bg-[#b69df1] hover:bg-[#b69df1]/90 text-white font-semibold py-4 rounded-xl text-lg"
+        >
+          "Unirme a la Lista de Espera"
+        </Button>
+
+        <p class="text-[#7d64c7] text-sm text-center">
+          Al unirte, aceptas recibir emails sobre Prompts Cake.
+          <br />
+          Puedes cancelar tu suscripción en cualquier momento.
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

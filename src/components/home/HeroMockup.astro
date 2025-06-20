@@ -1,0 +1,70 @@
+<div class="relative">
+  <div class="animate-float">
+    <div class="relative bg-[#2f2546]/30 backdrop-blur-sm rounded-3xl p-8 border border-[#7d64c7]/20">
+      {/* Browser mockup */}
+      <div class="bg-[#161221] rounded-2xl overflow-hidden border border-[#7d64c7]/10">
+        {/* Browser header */}
+        <div class="flex items-center gap-2 px-4 py-3 bg-[#2f2546]/50 border-b border-[#7d64c7]/10">
+          <div class="flex gap-2">
+            <div class="w-3 h-3 rounded-full bg-red-500/60" />
+            <div class="w-3 h-3 rounded-full bg-yellow-500/60" />
+            <div class="w-3 h-3 rounded-full bg-green-500/60" />
+          </div>
+          <div class="flex-1 text-center text-sm text-[#7d64c7]">chat.openai.com</div>
+        </div>
+        {/* ChatGPT interface mockup */}
+        <div class="p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-[#b69df1]/20 flex items-center justify-center">
+              <span class="text-[#b69df1] text-sm font-bold">AI</span>
+            </div>
+            <div class="text-white text-sm">ChatGPT</div>
+          </div>
+
+          <div class="bg-[#2f2546]/30 rounded-xl p-4 text-sm text-[#a495c6]">
+            ¡Hola! ¿En qué puedo ayudarte hoy?
+          </div>
+          {/* Prompt input with floating button */}
+          <div class="relative">
+            <div class="bg-[#2f2546]/50 rounded-xl p-4 border border-[#7d64c7]/20">
+              <div class="text-sm text-[#7d64c7] mb-2">Escribe tu mensaje...</div>
+            </div>
+            {/* Floating Prompts Cake button */}
+            <div class="absolute -right-2 -top-2">
+              <div class="bg-[#b69df1] rounded-full p-3 shadow-lg border-2 border-[#161221] animate-pulse">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating prompt panel */}
+      <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-[#2f2546]/90 backdrop-blur-sm rounded-2xl p-4 border border-[#7d64c7]/20 w-64">
+        <div class="text-white font-semibold mb-3 text-sm">Mis Prompts</div>
+        <div class="space-y-2">
+          <div class="bg-[#161221]/50 rounded-lg p-3 text-xs">
+            <div class="text-[#b69df1] font-medium">📝 Escritura Creativa</div>
+            <div class="text-[#7d64c7] mt-1">Actúa como un escritor experto...</div>
+          </div>
+          <div class="bg-[#161221]/50 rounded-lg p-3 text-xs">
+            <div class="text-[#b69df1] font-medium">💼 Análisis de Negocio</div>
+            <div class="text-[#7d64c7] mt-1">Analiza el siguiente caso...</div>
+          </div>
+          <div class="bg-[#161221]/50 rounded-lg p-3 text-xs">
+            <div class="text-[#b69df1] font-medium">🎨 Diseño UI/UX</div>
+            <div class="text-[#7d64c7] mt-1">Sugiere mejoras para...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Elements -->
+  <div class="absolute -top-6 -right-6 glass rounded-xl p-4 animate-float" style="animation-delay: 1s;">
+    <span class="text-2xl">💡</span>
+  </div>
+  <div class="absolute -bottom-6 -left-6 glass rounded-xl p-4 animate-float" style="animation-delay: 2s;">
+    <span class="text-2xl">⚡</span>
+  </div>
+</div>
